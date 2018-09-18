@@ -1,1 +1,11 @@
+.homepage-pic {
+  background-image: url(images/vintage-camera.png);
+  height: 100px;
+  width: 100px;
+}
 
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

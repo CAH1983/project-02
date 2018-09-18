@@ -1,0 +1,26 @@
+<%# ~~~~~~~~~~~~~ EDIT YOUR POST ✏️ ~~~~~~~~~~~~~~ %>
+
+<h1> EDIT Page</h1>
+<h2> edit your post </h2>
+
+<%# form to edit %>
+<form method="POST" action="/posts/<%= post._id %>">
+
+  <input type="hidden" name="_method" value="PUT"/>
+  <div>
+
+  <%# user edit caption %>
+    <label for="name"> Caption </label>
+    <input name="caption" id="caption" placeholder="Caption" value="<%= post.caption %>" />
+  </div>
+
+  <%# user edit image %>
+  <div>
+    <label for="name">Image</label>
+    <input name="image" id="image" placeholder="image" value="<%= post.image %>" required pattern="^https?:\/\/.+" />
+  </div>
+
+  <%# user clicks submit %>
+  <button>Submit</button>
+
+</form>

@@ -1,0 +1,33 @@
+<%# REGISTER %>
+
+<h1> Register to InstaClone </h1>
+<h2> Become part of InstaClone Community </h2>
+
+<form method="POST" action="/register">
+
+<%# username box %>
+  <div>
+    <label for="username"> Username </label>
+    <input name="username" id="username" placeholder="Username" />
+  </div>
+
+  <%# email box %>
+  <div>
+    <label for="email"> Email</label>
+    <input name="email" id="email" placeholder="Email" />
+  </div>
+
+  <%# password and password confirmation boxes %>
+  <div>
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" placeholder="Password" />
+  </div>
+  <div>
+    <label for="passwordConfirmation">Password Confirmation</label>
+    <input type="password" name="passwordConfirmation" id="passwordConfirmation" placeholder="Password Confirmation" />
+  </div>
+
+  <%# submit button %>
+  <button>Submit</button>
+
+</form>

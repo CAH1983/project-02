@@ -1,0 +1,47 @@
+<!-- LAYOUT -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> InstaClone </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/app.js" charset="utf-8"></script>
+  </head>
+
+ <!--  nav bar   -->
+  <body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/"> Home </a>
+    </div>
+    <div class="navbar-end">
+      <a class="navbar-item" href="/posts"> InstaClone posts</a>
+
+        <% if(locals.isAuthenticated) { %>
+          <a class="navbar-item" href="/posts/new"> Post a pic </a>
+          <a class="navbar-item" href="/logout"> Logout </a>
+        <% } else { %>
+
+          <a class="navbar-item" href="/register">Register</a>
+          <a class="navbar-item" href="/login"> Login </a>
+        <% } %>
+      </div>
+  </nav>
+
+ <!-- main -->
+    <%# prints out our flash messages  %>
+    <% for (const type in messages) { %>
+      <p class="notification is-<%= type %>"><%= messages[type] %></p>
+      <% }
+    %>
+
+    <main>
+      <%- body %>
+    </main>
+
+  </body>
+
+</html>

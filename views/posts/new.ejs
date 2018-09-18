@@ -1,0 +1,24 @@
+<%# ~~~~~~~~~~~~ CREATE A NEW POST ✍️ ~~~~~~~~~~~~~ %>
+<h1> POST A PIC </h1>
+
+<form method="POST" action="/posts">
+  <div class="field">
+      <label class="label" for="caption"> caption </label>
+
+      <div class="control">
+        <input class="input" name="caption" id="caption" placeholder="caption" required minlength="2" />
+      </div>
+  </div>
+
+    <%# user uploads photo %>
+  <div class="field">
+    <label class="label" for="image">Image</label>
+
+    <div class="control">
+      <input name="image" id="image" placeholder=" enter the image URL " required pattern="^https?:\/\/.+" />
+    </div>
+  </div>
+  <%# user clicks submit %>
+  <button>Upload</button>
+
+</form>
