@@ -1,14 +1,36 @@
+html, body {
+  min-height: 100vh;
+  background-color: #ECE8DE;
+}
+.navbar-end .navbar-item {
+  background-color: #323232;
+  color: #ECE8DE;
+}
+
+main {
+  min-height: calc(100vh - 50px);
+}
+
 .homepage-pic {
+  position: relative;
+      bottom: 80px;
+      right: 10px;
   background-image: url(/images/vintage-camera.png);
-  height: 150px;
-  width: 150px;
+  height: 250px;
+  width: 250px;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .home-container {
-  display: block;
+  min-height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  background-color: #ECE8DE;
 }
 
 
@@ -16,6 +38,51 @@ img {
   object-fit: cover;
 }
 
-.button.is-info.is-focused {
-  width: 150px;
+.content {
+  padding: 20px 20px 30px;
 }
+.home-text {
+  position: relative;
+  bottom: 50px;
+}
+
+.button.is-info.is-focused {
+  width: 140px;
+  color: #fff;
+  background-color: #930c25;
+  border-color: #930c25;
+  margin-bottom: 40px;
+  margin-top: -10px;
+
+}
+.button.is-info.is-outlined:hover {
+    background-color: transparent;
+    border-color: #930c25;
+    color: #930c25;
+}
+/* index page */
+
+.media {
+    align-items: center;
+    display: flex;
+    text-align: left;
+}
+/* show page */
+
+.container-show {
+  padding: 20px;
+}
+
+
+.comment-box {
+  padding: 20px;
+  text-align: justify;
+}
+
+.user-title {
+  display: flex;
+  align-items: center;
+}
+
+.content figure {
+  margin: 0;

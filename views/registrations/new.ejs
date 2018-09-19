@@ -3,31 +3,82 @@
 <h1> Register to InstaKlone </h1>
 <h2> Become part of InstaKlone Community </h2>
 
-<form method="POST" action="/register">
+<div class="container-show">
 
-<%# username box %>
-  <div>
-    <label for="username"> Username </label>
-    <input name="username" id="username" placeholder="Username" />
+  <form method="POST" action="/register">
+
+<%# Name %>
+  <div class="field">
+    <div class="control">
+      <input class="input" type="text" placeholder=" Name">
+    </div>
   </div>
 
-  <%# email box %>
-  <div>
-    <label for="email"> Email</label>
-    <input name="email" id="email" placeholder="Email" />
+<%# UserName %>
+  <div class="field">
+    <div class="control has-icons-left has-icons-right">
+      <input class="input is-success" name="username" type="text" placeholder="Username">
+      <span class="icon is-small is-left">
+        <i class="fas fa-user"></i>
+      </span>
+      <span class="icon is-small is-right">
+        <i class="fas fa-check"></i>
+      </span>
+    </div>
+    <p class="help is-success">This username is available</p>
   </div>
 
-  <%# password and password confirmation boxes %>
-  <div>
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password" placeholder="Password" />
-  </div>
-  <div>
-    <label for="passwordConfirmation">Password Confirmation</label>
-    <input type="password" name="passwordConfirmation" id="passwordConfirmation" placeholder="Password Confirmation" />
+<%# email address %>
+  <div class="field">
+    <div class="control has-icons-left has-icons-right">
+      <input class="input is-danger" type="email" name="email"  placeholder="type your email">
+      <span class="icon is-small is-left">
+        <i class="fas fa-envelope"></i>
+      </span>
+      <span class="icon is-small is-right">
+        <i class="fas fa-exclamation-triangle"></i>
+      </span>
+    </div>
+    <p class="help is-danger">This email is invalid</p>
   </div>
 
-  <%# submit button %>
-  <button>Submit</button>
+<%# Marketing question %>
+  <div class="field">
+    <label class="label"> Where did you hear from us?</label>
+    <div class="control">
+      <div class="select">
+        <select>
+          <option> online ad </option>
+          <option> recommendation </option>
+          <option> Newspaper </option>
+        </select>
+      </div>
+    </div>
+  </div>
 
-</form>
+<%# password and password confirmation %>
+  <div class="field">
+    <p class="control has-icons-left">
+      <input class="input" type="password" name="password" placeholder="Password">
+      <span class="icon is-small is-left">
+        <i class="fas fa-lock"></i>
+      </span>
+    </p>
+  </div>
+
+  <div class="field">
+    <p class="control has-icons-left">
+      <input class="input" type="password" name="passwordConfirmation" placeholder="Password Confirmation">
+      <span class="icon is-small is-left">
+        <i class="fas fa-lock"></i>
+      </span>
+    </p>
+  </div>
+
+  <div class="field is-grouped">
+    <div class="control">
+      <button class="button is-link"> Register </button>
+    </div>
+  </div>
+  
+</div>
