@@ -1,11 +1,21 @@
 .homepage-pic {
-  background-image: url(images/vintage-camera.png);
-  height: 100px;
-  width: 100px;
+  background-image: url(/images/vintage-camera.png);
+  height: 150px;
+  width: 150px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .home-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
+}
+
+
+img {
+  object-fit: cover;
+}
+
+.button.is-info.is-focused {
+  width: 150px;
 }
