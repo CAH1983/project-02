@@ -7,9 +7,21 @@ html, body {
   color: #ECE8DE;
 }
 
+.title-box {
+  display: flex;
+}
+
+
+h1 {
+  align-self: center;
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+}
 div h1 {
   margin: 5px auto 20px;
+  align-self: center;
 }
+
 main {
   min-height: calc(100vh - 50px);
 }
@@ -37,18 +49,28 @@ main {
   background-color: #ECE8DE;
 }
 
+.button {
+  align-self: center;
+}
 
 img {
   object-fit: cover;
 }
 
+.card {
+  margin-bottom: 10px;
+}
 .content {
   padding: 20px 20px 30px;
 }
 .home-text {
   position: relative;
   bottom: 50px;
+  font-family: 'Amatic SC', cursive;
+  text-transform: uppercase;
+  font-weight: bold;
 }
+
 
 .button.is-info.is-focused {
   width: 140px;
@@ -87,7 +109,6 @@ img {
 .container-show {
   display: flex;
   flex-direction: column;
-
 }
 
 .comment-box {
@@ -116,10 +137,19 @@ img {
 }
 
 .icons-line {
+  display: flex;
   padding-right: 20px;
 }
 
 i {
   font-size: 30px;
   margin: 10px 35px;
+}
+
+.comment-username  {
+  font-family: 'Pacifico', cursive;
+}
+
+h5 {
+  margin-bottom: 0;
 }
