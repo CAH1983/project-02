@@ -7,10 +7,14 @@ html, body {
   color: #ECE8DE;
 }
 
+div h1 {
+  margin: 5px auto 20px;
+}
 main {
   min-height: calc(100vh - 50px);
 }
 
+/* homepage */
 .homepage-pic {
   position: relative;
       bottom: 80px;
@@ -67,12 +71,24 @@ img {
     display: flex;
     text-align: left;
 }
+
+/* Login page */
+.container-login {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  min-height: calc(100vh - 50px);
+  flex-direction: column;
+  justify-content: center;
+}
+
 /* show page */
 
 .container-show {
-  padding: 20px;
-}
+  display: flex;
+  flex-direction: column;
 
+}
 
 .comment-box {
   padding: 20px;
@@ -86,3 +102,24 @@ img {
 
 .content figure {
   margin: 0;
+}
+
+.delete {
+  margin: 20px;
+}
+
+/* edit page */
+
+.container-edit {
+  padding: 20px;
+  margin: 20px 20px;
+}
+
+.icons-line {
+  padding-right: 20px;
+}
+
+i {
+  font-size: 30px;
+  margin: 10px 35px;
+}

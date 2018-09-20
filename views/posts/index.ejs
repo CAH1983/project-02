@@ -1,5 +1,5 @@
 
-  <h1> InstaKlone Index </h1>
+  <h1> What's on </h1>
 
   <section class=“section”>
    <div class=“container”>
@@ -7,7 +7,6 @@
 
       <% locals.posts.forEach(post => { %>
         <div class= "card">
-
 
             <div class="card-content">
               <div class="media">
@@ -31,13 +30,21 @@
                   <img src="<%= post.image %>" alt="Placeholder image">
                 </figure>
               </div>
+            </a>
+
+            <div class="icons-line">
+              <span><i class="far fa-thumbs-up"></i> </span>
+              <span><i class="fas fa-retweet"></i> </span>
+              <a href="posts/<%=post._id %>"><span><i class="far fa-comment"></i> </span></a>
+            </div>
+
 
             <div class="content">
               <%= post.caption %>
               <br>
             </div>
         </div>
-        </a>
+
       <% }) %>
 
   </div>

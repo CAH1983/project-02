@@ -14,6 +14,13 @@
   <%# displays the image %>
     <img src="<%= post.image %>" alt="<%= post.user.username %>" height="50" />
 
+    <%# icons like, share, comment%>
+    <div class="icons-line">
+      <span><i class="far fa-thumbs-up"></i> </span>
+      <span><i class="fas fa-retweet"></i> </span>
+      <a href="posts/<%=post._id %>"><span><i class="far fa-comment"></i> </span></a>
+    </div>
+
     <p><%= post.caption %></p>
 
     <h5 class="title is-5"> Comments</h5>
