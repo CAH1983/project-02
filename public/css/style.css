@@ -51,10 +51,18 @@ main {
 
 .button {
   align-self: center;
+  cursor: pointer;
+}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 10px 10px 5px grey;
+  transform: translateY(4px);
 }
 
 img {
   object-fit: cover;
+  text-shadow:
 }
 
 .card {
@@ -81,8 +89,8 @@ img {
   margin-top: -10px;
 
 }
-.button.is-info.is-outlined:hover {
-    background-color: transparent;
+.button.is-success, .button.is-info, .button.is-primary:hover {
+    background-color: #ECE8DE;
     border-color: #930c25;
     color: #930c25;
 }
@@ -119,6 +127,7 @@ img {
 .user-title {
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .content figure {
@@ -152,4 +161,9 @@ i {
 
 h5 {
   margin-bottom: 0;
+}
+
+.button.is-primary, .button.is-success {
+  background-color: #930c25;
+  color: white;
 }
