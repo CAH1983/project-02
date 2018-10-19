@@ -1,5 +1,3 @@
-// ~~~~~~~~~~~~~~~~ DATA BASE Content ~~~~~~~~~~~~~~~~~~~~
-
 const mongoose = require('mongoose');
 const {dbURI } = require('../config/environment');
 
@@ -8,23 +6,65 @@ const User = require('../models/user');
 
 mongoose.connect(dbURI, (err, db) => {
   db.dropDatabase(() => { // delete the database ready for new database
-  //~~ user's login info
-    User.create({
+  //~~~~~ users
+    User.create([{
       username: 'cah1983',
       email: 'carolineho1983@yahoo.fr',
       password: 'pass',
       passwordConfirmation: 'pass'
-    }, (err, user) => {
+    },
+    {
+      username: 'machine-man',
+      email: 'machine@man.com',
+      password: 'pass',
+      passwordConfirmation: 'pass'
+    },
+    {
+      username: 'lana-delrey',
+      email: 'lana@delrey.com',
+      password: 'pass',
+      passwordConfirmation: 'pass'
+    }],
+
+    // ~~~~~~~~ pictures
+    (err, users) => {
       if(err) console.log(err);
-      else console.log('user created');
-      // ~~ content of the post
-      Post.create({
-        image: 'http://www.emcartaz.net/wp-content/uploads/2017/05/Julia-16-dias-Chiquinha-MR.jpg',
-        caption: 'nerdy baby',
-        user: user
-      }, (err) => {
+      else console.log(`${users.length} users created`);
+
+      Post.create([{
+        image: './images/palm-trees.jpg',
+        caption: '#palmtrees 🌴 #holidays 🐚 #Instaclonevibes',
+        user: users[2]
+      },
+      {
+        image: './images/fashion-week.jpg',
+        caption: '#FashionWeek #CatWalk #Milano',
+        user: users[0]
+      },
+      {
+        image: './images/male-model-stairs.jpeg',
+        caption: '#chillin #summertime',
+        user: users[0]
+      },
+      {
+        image: './images/dj.jpg',
+        caption: '#Djaying #Amsterdam #Festival',
+        user: users[1]
+      },
+      {
+        image: './images/AI-brain.jpg',
+        caption: 'Inserting a chip in a human brain 🧠 + 💾',
+        user: users[1]
+      },
+      {
+        image: './images/lana-delrey.jpg',
+        caption: 'About last night in LA ... ',
+        user: users[2]
+      }],
+
+      (err, posts) => {
         if(err) console.log(err);
-        else console.log('post created');
+        else console.log(`${posts.length} posts created`);
         mongoose.connection.close();
       });
     });
