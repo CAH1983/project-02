@@ -32,32 +32,32 @@ mongoose.connect(dbURI, (err, db) => {
       else console.log(`${users.length} users created`);
 
       Post.create([{
-        image: './images/palm-trees.jpg',
+        image: '/images/palm-trees.jpg',
         caption: '#palmtrees 🌴 #holidays 🐚 #Instaclonevibes',
         user: users[2]
       },
       {
-        image: './images/fashion-week.jpg',
+        image: '/images/fashion-week.jpg',
         caption: '#FashionWeek #CatWalk #Milano',
         user: users[0]
       },
       {
-        image: './images/male-model-stairs.jpeg',
+        image: '/images/male-model-stairs.jpeg',
         caption: '#chillin #summertime',
         user: users[0]
       },
       {
-        image: './images/dj.jpg',
+        image: '/images/dj.jpg',
         caption: '#Djaying #Amsterdam #Festival',
         user: users[1]
       },
       {
-        image: './images/AI-brain.jpg',
+        image: '/images/AI-brain.jpg',
         caption: 'Inserting a chip in a human brain 🧠 + 💾',
         user: users[1]
       },
       {
-        image: './images/lana-delrey.jpg',
+        image: '/images/lana-delrey.jpg',
         caption: 'About last night in LA ... ',
         user: users[2]
       }],
